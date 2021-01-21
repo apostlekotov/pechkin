@@ -11,6 +11,6 @@ exports.sendMail = async (req, res) => {
 		res.status(200).json({ success: true, data: 'Your message has been sent' });
 	} catch (err) {
 		console.error(`${err}`.red);
-		res.status(500).json({ success: false, error: err.message });
+		res.status(500).json({ success: false, error: 'Server Error' });
 	}
 };
