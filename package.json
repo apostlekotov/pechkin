@@ -1,7 +1,7 @@
 {
 	"name": "pechkin",
 	"version": "1.0.0",
-	"description": "API for contact forms povered by node-telegram-bot-api",
+	"description": "API for contact forms powered by node-telegram-bot-api and Nodemailer",
 	"main": "index.js",
 	"author": "Kotov <kotov.smtp@gmail.com>",
 	"license": "MIT",
