@@ -43,7 +43,7 @@ Endpoint for sending letter to [@IgorIvanovichPechkinBot](https://t.me/IgorIvano
 
 #### Telegram Message Request Attributes
 
-| Attribute |      Type n      | Description         |
+| Attribute |       Type       | Description         |
 | --------- | :--------------: | ------------------- |
 | cid       | string \| number | Recipient chat ID   |
 | message   |      string      | Body of the message |
