@@ -1,9 +1,9 @@
-const { sendIt } = require('../utils/sendIt');
+import { sendIt } from '../utils/sendIt';
 
 // @desc      Send message to telegram bot
-// @route     POST /api/mail
+// @route     POST /api/mail/send
 // @access    Public
-exports.sendMail = async (req, res) => {
+export const sendMail = async (req, res) => {
 	const { email, subject, text } = req.body;
 
 	try {

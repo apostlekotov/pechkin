@@ -1,18 +1,19 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config({ path: __dirname + '/.env' });
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const compression = require('compression');
-const rateLimit = require('express-rate-limit');
-const colors = require('colors');
+import colors from 'colors';
+colors.enable();
 
-const routes = require('./routes');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import compression from 'compression';
+import rateLimit from 'express-rate-limit';
+
+import routes from './routes';
 
 (async () => {
 	const app = express();
-
-	const bot = require('./bot');
 
 	app.use(bodyParser.json());
 	app.use(cors());
