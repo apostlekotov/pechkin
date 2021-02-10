@@ -1,6 +1,12 @@
 import nodemailer from 'nodemailer';
 
-export const sendIt = async (options) => {
+type OptionsType = {
+	email: string;
+	subject: string;
+	text: string;
+};
+
+export const sendIt = async (options: OptionsType) => {
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
@@ -19,7 +25,7 @@ export const sendIt = async (options) => {
 		html: text,
 	};
 
-	const info = await transporter.sendMail(message);
+	await transporter.sendMail(message);
 
-	console.log('Mail has been sent: %s'.green, info.messageId);
+	// console.log('Mail has been sent: %s'.green, info.messageId);
 };

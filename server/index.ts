@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
-dotenv.config({ path: __dirname + '/.env' });
+import 'colorts/lib/string';
 
-import colors from 'colors';
-colors.enable();
+import dotenv from 'dotenv';
+dotenv.config();
 
 import express from 'express';
 import bodyParser from 'body-parser';

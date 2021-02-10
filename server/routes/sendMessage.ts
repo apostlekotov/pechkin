@@ -1,9 +1,10 @@
 import Bot from '../bot';
+import { RequestHandler } from 'express';
 
 // @desc      Send message to telegram bot
 // @route     POST /api/telegram/send
 // @access    Public
-export const sendMessage = async (req, res) => {
+export const sendMessage: RequestHandler = async (req, res) => {
 	const { cid, message } = req.body;
 
 	try {

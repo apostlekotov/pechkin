@@ -1,3 +1,3 @@
 export default {
-	start: (id: number) => `Yo ${id}`,
+	start: (id: number) => `Yoo ${id}`,
 };

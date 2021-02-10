@@ -1,9 +1,10 @@
+import { RequestHandler } from 'express';
 import { sendIt } from '../utils/sendIt';
 
 // @desc      Send message to telegram bot
 // @route     POST /api/mail/send
 // @access    Public
-export const sendMail = async (req, res) => {
+export const sendMail: RequestHandler = async (req, res) => {
 	const { email, subject, text } = req.body;
 
 	try {

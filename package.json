@@ -7,7 +7,6 @@
 	"license": "MIT",
 	"scripts": {
 		"web": "yarn --cwd frontend/ start",
-		"server": "yarn --cwd server/ start",
-		"start": "concurrently \"yarn --cwd frontend/ start \" \"yarn --cwd server/ start \""
+		"server": "yarn --cwd server/ prod"
 	}
 }
