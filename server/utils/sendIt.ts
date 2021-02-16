@@ -6,7 +6,7 @@ type OptionsType = {
 	text: string;
 };
 
-export const sendIt = async (options: OptionsType) => {
+export const sendGmail = async (options: OptionsType) => {
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
