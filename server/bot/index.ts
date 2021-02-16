@@ -1,12 +1,8 @@
 import TelegramBot from 'node-telegram-bot-api';
-import messages from './messages';
+import handlers from './handlers';
 
-const Bot = new TelegramBot(process.env.TOKEN as string, { polling: true });
+const bot = new TelegramBot(process.env.TOKEN as string, { polling: true });
 
-Bot.onText(/\/start/, (msg) => {
-	const cid = msg.chat.id;
+handlers(bot);
 
-	Bot.sendMessage(cid, messages.start(cid));
-});
-
-export default Bot;
+export default bot;
