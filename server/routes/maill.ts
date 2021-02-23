@@ -31,5 +31,5 @@ export const sendLetter: RequestHandler = async (req, res) => {
 
 	return res
 		.status(200)
-		.json({ success: true, data: 'Your message has been sent' });
+		.json({ success: true, message: 'Your message has been sent' });
 };

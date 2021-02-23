@@ -1,4 +1,5 @@
 import 'colorts/lib/string';
+import { auth } from '../utils/auth';
 import { check } from 'express-validator';
 
 import { sendLetter } from './maill';
@@ -19,6 +20,7 @@ export default function (app: any) {
 	);
 	app.post(
 		'/telegram/send',
+		[auth],
 		check('cid')
 			.not()
 			.isEmpty()
